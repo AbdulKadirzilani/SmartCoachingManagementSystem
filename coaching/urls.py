@@ -1,0 +1,16 @@
+from django.urls import include,path
+from django.contrib import admin
+from django.urls import path
+#from .router import router
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+
+    #path('api/', include('router.urls')),
+    path('', include('student.urls')),
+    #path('', include('quotes.urls')),
+
+    path('api/', include('api.urls'))
+
+
+]
