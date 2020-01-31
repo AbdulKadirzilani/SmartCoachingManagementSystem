@@ -32,7 +32,7 @@ def single_send_mail_task():
     return None
 
 
-'''
+
 @periodic_task(
     run_every=(crontab(minute='*/25')),
     name="send_mail",
@@ -43,4 +43,3 @@ def single_send_mail_task():
 def sleepy(duration):
     sleep(duration)
     return None
-'''
