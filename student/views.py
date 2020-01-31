@@ -20,7 +20,8 @@ class HomeView(ListView):
 def sendAll(request):
     #message will going start after 10 second running code
     #sleepy(10)
-    sleepy(5)
+    #@periodic_task(run_every=(crontab(minute='*/15')), name="some_task", ignore_result=True)
+    
     send_mail_task()
     return HttpResponse("<h1>All mail sent Task is success </h1>")
 
@@ -28,7 +29,6 @@ def sendAll(request):
 def sendRandom(request):
     #message will going start after 10 second running code
     #sleepy(10)
-    sleepy(10)
     single_send_mail_task()
     return HttpResponse("<h1>Using celery Random mail send is success </h1>")
 
